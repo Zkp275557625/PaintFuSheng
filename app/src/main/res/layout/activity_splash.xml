@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/index_bg"
+    android:orientation="vertical">
+
+    <com.github.jlmd.animatedcircleloadingview.AnimatedCircleLoadingView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/iv_splash"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/index_bg"
+        app:mainColor="@color/colorPurple"
+        app:secondaryColor="@color/colorAccent"
+        app:textColor="@color/colorWhite" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/logo"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="65dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="30dp"
+        android:text="欢迎来到浮生绘"
+        android:textColor="@color/colorPurple"
+        android:textSize="20sp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

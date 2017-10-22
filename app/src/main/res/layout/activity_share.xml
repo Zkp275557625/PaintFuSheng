@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/index_bg">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/index_line" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/camera_bg">
+
+
+        <com.kaipingzhou.paintfusheng.controller.view.imageview.ImageViewTouch
+            android:id="@+id/iv_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@drawable/camera_preview" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_loading_dialog"
+        android:id="@+id/ll_loading"/>
+
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/camera_btn_bg_selector"
+        android:src="@drawable/camera_btn_back_text" />
+
+    <ImageButton
+        android:id="@+id/btn_save_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/relativeLayout2"
+        android:layout_alignRight="@+id/relativeLayout2"
+        android:layout_alignTop="@+id/btn_back"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/camera_btn_bg_selector"
+        android:src="@drawable/share_btn_save_and_share_text" />
+
+</RelativeLayout>

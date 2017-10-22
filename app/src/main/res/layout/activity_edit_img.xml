@@ -1,0 +1,1375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/index_bg">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/index_line" />
+
+    <RelativeLayout
+        android:id="@+id/rl_preview"
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/camera_bg">
+
+        <com.kaipingzhou.paintfusheng.controller.view.imageview.ImageViewTouch
+            android:id="@+id/iv_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/camera_preview" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_preview"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/editimg_lineralayout_bg"
+        android:orientation="vertical">
+
+        <HorizontalScrollView
+            android:id="@+id/hsv_classic_hand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/ll_classic_hand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_original"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview"
+                        android:src="@drawable/preview_selected" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="原图"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_pencil"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="铅笔画"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_colorpencil"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="彩色铅笔画"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="22sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_watercolor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="水彩画"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_carving"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="浮雕"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_frostedglass"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="毛玻璃"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_chalkpaint"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="粉笔画"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_lowpoly"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="Lowpoly"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_coherencefilter"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="抽象画"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_edgepreserving"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="磨皮"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:id="@+id/hsv_dream_life"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_original_dream_life"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview"
+                        android:src="@drawable/preview_selected" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="原图"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_iceimg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="冰冻"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_fireimg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="熔铸"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="22sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_delusion"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="幻觉"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_brushing"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="急速奔驰"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_shutter"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="百叶窗"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_waterstreak"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="水纹"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_paintbrush"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="画笔"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_edge_degradation"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="边缘退化"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_noise"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="噪点"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:id="@+id/hsv_color_world"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_original_color_world"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview"
+                        android:src="@drawable/preview_selected" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="原图"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_polaroid"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="宝丽来色"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_red"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="泛红"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="22sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_green"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="荧光绿"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="宝石蓝"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_yellow"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="泛黄"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_lomo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="lomo"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_neon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="霓虹"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_black_white"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="黑白"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_old_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="老照片"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:id="@+id/hsv_paint_life"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_original_paint_life"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview"
+                        android:src="@drawable/preview_selected" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="原图"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_inverted_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="倒影"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_sunshineimage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="光照"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="22sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_feather"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="羽化"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_magnifier"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="放大镜"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_magicmirror"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="哈哈镜"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_bright"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="明亮"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_masic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="马赛克"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_cartoon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="漫画"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_radial_distortion"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="扭曲"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_oilpaint"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="油画"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:id="@+id/hsv_classic_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_original_classic_filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview"
+                        android:src="@drawable/preview_selected" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="原图"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_soft"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="轻柔"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_classic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="经典"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="22sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_florid"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="绚丽"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_retro"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="复古"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_genteel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="优雅"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_film"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="胶片"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_recall"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="回忆"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_yogurt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="优格"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_fleeting_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="流年"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_luscious"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editimg_imitate_preview" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/editimg_imitate_unselected_bg"
+                        android:gravity="center"
+                        android:text="光绚"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/colorBlack" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/index_btn_selector"
+                android:src="@drawable/editimg_btn_back_text" />
+
+            <ImageButton
+                android:id="@+id/btn_ok"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/index_btn_selector"
+                android:src="@drawable/editimg_btn_ok_text" />
+
+            <TextView
+                android:id="@+id/tv_filter_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="经典手绘"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/ll_loading"
+        layout="@layout/view_loading_dialog"
+        android:visibility="invisible" />
+
+</RelativeLayout>

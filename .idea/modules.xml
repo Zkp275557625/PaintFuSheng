@@ -3,8 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PaintFuSheng.iml" filepath="$PROJECT_DIR$/PaintFuSheng.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PaintFuSheng.iml" filepath="$PROJECT_DIR$/PaintFuSheng.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/loading_view/loading_view.iml" filepath="$PROJECT_DIR$/loading_view/loading_view.iml" />
       <module fileurl="file://$PROJECT_DIR$/loading_view/loading_view.iml" filepath="$PROJECT_DIR$/loading_view/loading_view.iml" />
     </modules>
   </component>
